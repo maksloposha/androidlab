@@ -1,5 +1,6 @@
 package com.example.androidlab2fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,10 +16,11 @@ import org.jetbrains.annotations.NotNull;
 public class SecondFragment extends Fragment {
     private TextView resultTextView;
     private Button buttonCancel;
+    private DatabaseHelper databaseHelper;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        databaseHelper = new DatabaseHelper(getContext());
     }
 
     @Override
@@ -45,6 +47,10 @@ public class SecondFragment extends Fragment {
                 showAlert(v, "The result text container is already empty", buttonCancel);
             }
         });
+        view.findViewById(R.id.button_open).setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), DisplayRecordsActivity.class);
+            startActivity(intent);
+        });
     }
     private void showAlert(View v, String text, Button button) {
         Snackbar.make(v, text, Snackbar.LENGTH_LONG)
@@ -54,5 +60,6 @@ public class SecondFragment extends Fragment {
     public void updateTextView(String text, int textSize) {
         resultTextView.setText(text);
         resultTextView.setTextSize(textSize);
+        databaseHelper.insertText(text);
     }
 }

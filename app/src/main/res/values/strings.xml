@@ -43,4 +43,7 @@
     <string name="button_ok">Ok</string>
     <string name="input_hint">Enter text</string>
     <string name="button_cancel">Cancel\n\n\n</string>
+    <string name="button_open">Open</string>
+    <string name="button_clear">Clear database</string>
+    <string name="return_to_main_activity">Return</string>
 </resources>

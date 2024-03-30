@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:orientation="vertical"
-              tools:context="com.example.androidlab2fragments.MainActivity">
-
-    <!-- Перший фрагмент -->
-    <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragment1"
-            android:name="com.example.androidlab2fragments.FirstFragment"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_height="match_parent">
 
-    <!-- Другий фрагмент -->
-    <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragment2"
-            android:name="com.example.androidlab2fragments.SecondFragment"
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-</LinearLayout>
+        <!-- Перший фрагмент -->
+        <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment1"
+                android:name="com.example.androidlab2fragments.FirstFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
+        <!-- Другий фрагмент -->
+        <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragment2"
+                android:name="com.example.androidlab2fragments.SecondFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

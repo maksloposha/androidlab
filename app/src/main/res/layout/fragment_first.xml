@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FFFFFF"
+              android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="46dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+            android:id="@+id/radioGroupForSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal">
+
+        <RadioButton
+                android:id="@+id/radioButtonSize1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/size1_choise" />
+
+        <RadioButton
+                android:id="@+id/radioButtonSize2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/size2_choice" />
+
+        <RadioButton
+                android:id="@+id/radioButtonSize3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/size3_choice" />
+    </RadioGroup>
+
+    <Button
+            android:id="@+id/buttonOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/button_ok" />
+
+</LinearLayout>

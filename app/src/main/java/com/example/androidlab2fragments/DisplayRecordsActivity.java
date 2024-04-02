@@ -47,7 +47,7 @@ public class DisplayRecordsActivity extends AppCompatActivity {
     private void displayRecords() {
         recordList = new ArrayList<>();
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM your_table", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM my_table", null);
 
         if (cursor != null && cursor.moveToFirst()) {
             do {
